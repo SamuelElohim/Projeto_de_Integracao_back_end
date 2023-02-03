@@ -1,13 +1,43 @@
-//Sql Querry Command
+/*Sql Querry Command*/
+
+DROP TABLE IF EXISTS model_table;
+DROP TABLE IF EXISTS category_table;
+DROP TABLE IF EXISTS line_table;
+
+
+CREATE TABLE line_table(
+    name text NOT NULL,
+    PRIMARY KEY(name)
+);
+
+CREATE TABLE category_table(
+    name text NOT NULL,
+    line_id text,
+    PRIMARY KEY(name),
+    FOREIGN KEY(line_id)
+        REFERENCES line_table (name)
+        ON DELETE CASCADE
+);
+
+CREATE TABLE model_table(
+    name text NOT NULL,
+    category_id text,
+    PRIMARY KEY(name),
+    FOREIGN KEY(category_id)
+        REFERENCES category_table (name)
+        ON DELETE CASCADE
+);
+
+
 
 INSERT INTO line_table (name)
 VALUES
-	('Ares'),
-	('Cronos');
+    ('Ares'),
+    ('Cronos');
 
 INSERT INTO category_table (line_id, name)
 VALUES
-	('Cronos', 'Cronos Old'),
+    ('Cronos', 'Cronos Old'),
     ('Cronos', 'Cronos L'),
     ('Cronos', 'Cronos NG'),
     ('Ares',   'Ares TB'),
@@ -15,7 +45,7 @@ VALUES
 
 INSERT INTO model_table(category_id, name)
 VALUES
-	('Cronos Old', 'Cronos 6001-A'),
+    ('Cronos Old', 'Cronos 6001-A'),
     ('Cronos Old', 'Cronos 6003'),
     ('Cronos Old', 'Cronos 7023'),
     ('Cronos L',   'Cronos 6021L'),
@@ -32,4 +62,3 @@ VALUES
     ('Ares THS',   'Ares 8023 15'),
     ('Ares THS',   'Ares 8023 200'),
     ('Ares THS',   'Ares 8023 2,5');
-
