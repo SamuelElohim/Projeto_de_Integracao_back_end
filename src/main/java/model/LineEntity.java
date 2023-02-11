@@ -1,24 +1,20 @@
 package model;
 
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
+
 @Entity
 @Table(name = "line_table")
-public class Line {
-//    CRONOS("Cronos"),
-//    ARES(  "Ares");
+public class LineEntity {
 
     @Id
-
     @Column(name = "name", columnDefinition = "text")
     private String name;
 
-    public Line() {
+    public LineEntity() {
     }
 
-    public Line(String name) {
+    public LineEntity(String name) {
         this.name = name;
     }
 
