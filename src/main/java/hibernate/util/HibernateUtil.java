@@ -1,10 +1,7 @@
-package hibernate;
+package hibernate.util;
 
-import model.Model;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
-import java.util.List;
 
 
 public class HibernateUtil {
@@ -26,9 +23,4 @@ public class HibernateUtil {
         return sessionFactory;
     }
 
-    public static <T> List<T> GetObjectList(Class<T> objClass){
-        List<T> modelList = getSessionFactory().openSession()
-                .createQuery("FROM " + objClass.getTypeName()).list();
-        return modelList;
-    }
 }

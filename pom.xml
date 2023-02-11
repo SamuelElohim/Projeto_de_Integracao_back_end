@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
         <groupId>org.example</groupId>
         <version>1.0</version>
-        <artifactId>Projeto-de-Integracao-Eletra-3-Back-end</artifactId>
+        <artifactId>Projeto_de_integracao_back_end</artifactId>
 
 
     <properties>
