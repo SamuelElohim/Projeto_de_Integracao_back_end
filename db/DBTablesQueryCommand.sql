@@ -1,4 +1,4 @@
-/*Sql Querry Command*/
+/*Sql Query Command*/
 
 DROP TABLE IF EXISTS model_table;
 DROP TABLE IF EXISTS category_table;
