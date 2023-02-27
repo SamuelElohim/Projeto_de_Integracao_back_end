@@ -1,4 +1,4 @@
-package model;
+package br.com.eletra.model;
 
 
 import javax.persistence.*;
@@ -15,6 +15,10 @@ public class LineEntity implements EntityInterface {
 
     public LineEntity(String name) {
         this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {

@@ -1,4 +1,4 @@
-package model;
+package br.com.eletra.model;
 
 import javax.persistence.*;
 
@@ -19,6 +19,15 @@ public class ModelEntity implements EntityInterface {
         this.category = category;
         this.name = name;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 
     public CategoryEntity getCategory() {
         return category;
