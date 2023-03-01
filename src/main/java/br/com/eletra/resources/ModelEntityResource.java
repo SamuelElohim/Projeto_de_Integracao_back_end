@@ -21,7 +21,7 @@ public class ModelEntityResource {
     ModelEntityRepository modelEntityRepository;
 
     @GetMapping("/modelos")
-    public List<ModelEntity> getLinesList() {
+    public List<ModelEntity> getList() {
         return modelEntityRepository.findAll();
     }
 

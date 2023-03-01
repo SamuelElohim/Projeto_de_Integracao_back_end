@@ -17,7 +17,7 @@ public class LineEntityResource {
     LineEntityRepository lineEntityRepository;
 
     @GetMapping("/linhas")
-    public List<LineEntity> getLinesList() {
+    public List<LineEntity> getList() {
         return lineEntityRepository.findAll();
     }
 
