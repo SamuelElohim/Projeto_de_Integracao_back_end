@@ -2,7 +2,7 @@ package br.com.eletra.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import springfox.documentation.builders.PathSelectors;
+import org.springframework.context.annotation.Import;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
@@ -34,7 +34,7 @@ public class SwaggerConfig {
                 "API REST para o acesso a uma base de dados contendo linhas de medidores elétricos",
                 "1.0",
                 "",
-                new Contact("Samuel E Conrado", "",
+                new Contact("Samuel E. Conrado", "",
                         ""),
                 "",
                 "", new ArrayList<VendorExtension>()
