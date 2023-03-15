@@ -1,11 +1,18 @@
 package br.com.eletra.model;
 
+import org.hibernate.annotations.Type;
+import org.hibernate.type.descriptor.sql.SmallIntTypeDescriptor;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "model_table")
 public class ModelEntity implements EntityInterface {
     @Id
+    @Column(name="id", columnDefinition = "SMALLINT")
+    @Type(type = "org.hibernate.type.ShortType")
+    private Short id;
+
     @Column(name = "name",columnDefinition = "text")
     private String name;
 
@@ -15,7 +22,8 @@ public class ModelEntity implements EntityInterface {
 
     public ModelEntity() {}
 
-    public ModelEntity(CategoryEntity category, String name) {
+    public ModelEntity(CategoryEntity category, String name, Short id) {
+        this.id = id;
         this.category = category;
         this.name = name;
     }
@@ -35,6 +43,14 @@ public class ModelEntity implements EntityInterface {
 
     public void setCategory(CategoryEntity category) {
         this.category = category;
+    }
+
+    public Short getId() {
+        return id;
+    }
+
+    public void setId(Short id) {
+        this.id = id;
     }
 
     @Override
