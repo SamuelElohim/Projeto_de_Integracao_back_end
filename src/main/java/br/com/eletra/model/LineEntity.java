@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "line_table")
-public class LineEntity implements EntityInterface {
+public class LineEntity{
 
     @Id
     @Column(name="id", columnDefinition = "SMALLINT")

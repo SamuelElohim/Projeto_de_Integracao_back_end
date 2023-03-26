@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "category_table")
-public class CategoryEntity implements EntityInterface {
+public class CategoryEntity{
     @Id
     @Column(name="id", columnDefinition = "SMALLINT")
     @Type(type = "org.hibernate.type.ShortType")
